@@ -1,5 +1,6 @@
 import React from 'react';
 import {fetchData} from './api';
+import image from './images/logo.png';
 // import Cards from './component/Cards/Cards';
 // import Chart from './component/Chart/Chart';
 // import CountryPicker from './component/CountryPicker/CountryPicker';
@@ -11,6 +12,7 @@ class App extends React.Component{
     super(props);
     this.state={
       data:{},
+      country:'',
 
     }
 
@@ -25,12 +27,23 @@ class App extends React.Component{
 
   }
 
+  handleCountryChange=async(country)=>{
+    const fetchedData=await fetchData(country);
+   // console.log(fetchedData);
+   this.setState({
+     data:fetchedData,
+     country:country
+   })
+
+  }
+
   render(){
     return(
       <div className={styles.container}>
+        <img className={styles.image} src={image} alt="Covid-19"/>
       <Cards data={this.state.data}/>
-      <CountryPicker/>
-      <Chart/>
+        <CountryPicker handleCountryChange={this.handleCountryChange}/>
+      <Chart data={this.state.data} country={this.state.country}/>
       <h2> Developed by Pawan Singhla</h2>
       
       </div>

@@ -5,14 +5,14 @@ import styles from './Chart.module.css';
 
 
 
-const Chart=()=>{
+const Chart=({data,country})=>{
     const[dailyData,setDailyData]=useState([]);
     useEffect(()=>{
     const fetchApI=async () => {
         setDailyData(await fetchDailyData());
     }
     fetchApI();
-    });
+    },[]);
 
 
 
@@ -38,10 +38,41 @@ const Chart=()=>{
         />
       ) : null
     );
+
+    console.log(country)
+const barChart=(
+  data.confirmed 
+  ?
+  (<Bar 
+    data={{
+      labels:['Infected','Recovered','Deaths'],
+      datasets:[{
+        label:'People',
+        backgroundColor:[
+          'rgba(0,0,255,0.5)',
+          'rgba(0,255,0,0.5)',
+          'rgba(255,0,0,0.5)',
+        ],
+        data:[data.confirmed.value,data.recovered.value,data.deaths.value]
+      }]
+
+    }}
+    options={{
+      legend:{display:false},
+      title:{display:true,text:`Current state in ${country}`},
+
+    }}
+
+
+    />
+
+  ):null
+)
+
   
 return(
     <div className={styles.container}>
-{lineChart}
+{country? barChart:lineChart}
 
     </div>
 )
