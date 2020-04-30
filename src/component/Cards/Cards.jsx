@@ -24,7 +24,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                             />
                         </Typography>
                         <Typography color="textSecondary">{new Date(lastUpdate).toUTCString()}</Typography>
-                        <Typography variant="body2">Number of active case of Covid19</Typography>
+                        <Typography variant="body2">Number of active cases of Covid19</Typography>
                     </CardContent>
                 </Grid>
 
@@ -40,7 +40,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                             />
                         </Typography>
                         <Typography color="textSecondary">{new Date(lastUpdate).toUTCString()}</Typography>
-                        <Typography variant="body2">Number of recoevred case of Covid19</Typography>
+                        <Typography variant="body2">Number of recovered cases of Covid19</Typography>
                     </CardContent>
                 </Grid>
 
