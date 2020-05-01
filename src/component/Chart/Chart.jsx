@@ -46,15 +46,16 @@ const barChart=(
   ?
   (<Bar 
     data={{
-      labels:['Confirmed','Recovered','Deaths'],
+      labels:['Confirmed','Active','Recovered','Deaths'],
       datasets:[{
         label:'People',
         backgroundColor:[
           'rgba(255,0,0,0.5)',
+          'rgba(0,0,255,0.5)',
           'rgba(0,255,0,0.5)',
           'rgba(0,0,0,0.5)',
         ],
-        data:[data.confirmed.value,data.recovered.value,data.deaths.value]
+        data:[data.confirmed.value,data.confirmed.value-data.recovered.value-data.deaths.value,data.recovered.value,data.deaths.value]
       }]
 
     }}
