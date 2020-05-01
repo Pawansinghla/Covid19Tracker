@@ -13,15 +13,24 @@ body{
     margin-top: 50px;
 }
 
-@media(max-width:770px){
+
+@media(max-width:660px){
     .container{
         margin:0 10%;
     
     }
+    
     .image{
         width: 100%;
     }
 }
+@media(min-width:660px){
+    .name{
+        width:100%;
+    }
+}
 .name{
-    margin-top:50px;
+    text-align: center;
+    margin-top:40px;
+    font-size:20px;
 }

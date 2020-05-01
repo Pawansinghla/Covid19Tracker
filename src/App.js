@@ -44,7 +44,7 @@ class App extends React.Component{
       <Cards data={this.state.data}/>
         <CountryPicker handleCountryChange={this.handleCountryChange}/>
       <Chart data={this.state.data} country={this.state.country}/>
-      <h2 className={styles.name}> Developed by &nbsp; <a target="blank" href="https://www.linkedin.com/in/pawansinghla300/">Pawan Singhla</a> </h2>
+      <h2 className={styles.name} xs={12}> Developed by &nbsp; <a target="blank" href="https://www.linkedin.com/in/pawansinghla300/">Pawan Singhla</a> </h2>
       
       </div>
     )
