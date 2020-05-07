@@ -6,7 +6,7 @@ import Link from '@material-ui/core/Link';
 // import Chart from './component/Chart/Chart';
 // import CountryPicker from './component/CountryPicker/CountryPicker';
 
-import {Cards,Chart,CountryPicker} from './component';
+import {Cards,Chart,CountryPicker,Footer} from './component';
 import styles from './App.module.css';
 class App extends React.Component{
   constructor(props){
@@ -40,17 +40,24 @@ class App extends React.Component{
 
   render(){
     return(
+      <>
       <div className={styles.container}>
         <img className={styles.image} src={image} alt="Covid-19"/>
       <Cards data={this.state.data}/>
         <CountryPicker handleCountryChange={this.handleCountryChange}/>
       <Chart data={this.state.data} country={this.state.country}/>
-      <h2 className={styles.name} xs={12}> Developed by &nbsp;   <Link target="none" href="https://www.linkedin.com/in/pawansinghla300/" color="inherit">
+      {/* <h2 className={styles.name} xs={12}> Developed by &nbsp;   <Link target="none" href="https://www.linkedin.com/in/pawansinghla300/" color="inherit">
 Pawan Singhla
-  </Link> </h2>
+  </Link> </h2> */}
       
       </div>
-    )
+      
+      <div className={styles.footer}>
+      
+      <Footer/>
+      </div>
+      </>
+    );
   }
 }
 export default App;

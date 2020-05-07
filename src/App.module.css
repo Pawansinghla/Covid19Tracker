@@ -1,11 +1,13 @@
-body{
-    background-color:rgb(250,250,250);
+
+.footer{
+    margin-top: 40px;
 }
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color:rgb(250,250,250);
 
 }
 .image{
