@@ -1,6 +1,7 @@
 import React from 'react';
 import {fetchData} from './api';
 import image from './images/logo.png';
+import Link from '@material-ui/core/Link';
 // import Cards from './component/Cards/Cards';
 // import Chart from './component/Chart/Chart';
 // import CountryPicker from './component/CountryPicker/CountryPicker';
@@ -44,7 +45,9 @@ class App extends React.Component{
       <Cards data={this.state.data}/>
         <CountryPicker handleCountryChange={this.handleCountryChange}/>
       <Chart data={this.state.data} country={this.state.country}/>
-      <h2 className={styles.name} xs={12}> Developed by &nbsp; <a target="blank" href="https://www.linkedin.com/in/pawansinghla300/">Pawan Singhla</a> </h2>
+      <h2 className={styles.name} xs={12}> Developed by &nbsp;   <Link target="none" href="https://www.linkedin.com/in/pawansinghla300/" color="inherit">
+Pawan Singhla
+  </Link> </h2>
       
       </div>
     )
