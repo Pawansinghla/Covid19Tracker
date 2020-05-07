@@ -13,13 +13,13 @@ function Footer() {
                 <div className="row justify-content-center">
                     <div className="col-12 col-sm-4 align-self-center">
                         <div className="text-center mt-2">
-                        <a  target="none" className="btn btn-social-icon bt-email  round" href="mailto:pawansinghla300@gmail.com"><i className="fa fa-envelope pr-1"></i></a>
+                        <a  target="none" className="btn btn-social-icon btn-github " href="https://github.com/Pawansinghla"><i className="fa fa-github "></i></a>
                       &nbsp; &nbsp;
-                        <a  target="none" className="btn btn-social-icon btn-facebook round " href="https://www.facebook.com/profile.php?id=100006731377332"><i className="fa fa-facebook"></i></a>
+                        <a  target="none" className="btn btn-social-icon btn-facebook  " href="https://www.facebook.com/profile.php?id=100006731377332"><i className="fa fa-facebook"></i></a>
                         &nbsp; &nbsp;
-                        <a  target="none" className="btn btn-social-icon btn-linkedin round" href="https://www.linkedin.com/in/pawansinghla300/"><i className="fa fa-linkedin"></i></a>
+                        <a  target="none" className="btn btn-social-icon btn-linkedin " href="https://www.linkedin.com/in/pawansinghla300/"><i className="fa fa-linkedin"></i></a>
                         &nbsp; &nbsp;
-                        <a target="none"  className="btn btn-social-icon btn-twitter round" href="https://twitter.com/SinghlaPawan"><i className="fa fa-twitter"></i></a>
+                        <a target="none"  className="btn btn-social-icon btn-twitter " href="https://twitter.com/SinghlaPawan"><i className="fa fa-twitter"></i></a>
                       
 
                         </div>
